@@ -1,6 +1,8 @@
-mod error;
+pub mod error;
 mod models;
 mod rate_limiter;
+pub mod ws_client;
+pub mod ws_models;
 
 use sha2::Digest;
 use std::collections::HashMap;
