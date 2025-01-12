@@ -12,7 +12,7 @@ use std::collections::HashMap;
 //
 
 /// "ping" request
-#[derive(Debug, Serialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct WsPingRequest {
     pub event: String, // "ping"
     #[serde(rename = "req_id", skip_serializing_if = "Option::is_none")]

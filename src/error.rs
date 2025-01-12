@@ -1,3 +1,4 @@
+use std::io;
 use thiserror::Error;
 
 /// A specialized error type for Kraken.
@@ -35,6 +36,10 @@ pub enum KrakenError {
     /// For invalid usage, missing credentials, bad parameters, etc.
     #[error("Invalid usage: {0}")]
     InvalidUsage(String),
+
+    ///variant for stsd::io::Error
+    #[error("IO error: {0}")]
+    IoError(#[from] io::Error),
 }
 
 /// We store `KrakenError::Kraken` for multiple error messages, but
