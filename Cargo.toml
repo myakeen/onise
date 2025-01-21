@@ -2,6 +2,10 @@
 name = "onise"
 version = "1.0.0"
 edition = "2021"
+license = "MIT" # MIT License
+description = "An async client for Kraken's APIs in Rust."
+repository = "https://github.com/myakeen/onise"
+
 
 [dependencies]
 futures-util = "0.3"
